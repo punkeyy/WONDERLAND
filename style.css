@@ -19,13 +19,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 5%;
-  position: fixed;
+  position: fixed!important;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
-  z-index: 100;
   border-bottom: 1px solid #eee;
+  z-index: 9999;  /* 이거만 남기기 */
 }
+
 
 .logo {
   width: 140px;
@@ -52,7 +55,7 @@ body {
   justify-content: center;
   text-align: center;
   background-color: #f5f5f5;
-}
+  margin-top: 180px !important;
 
 .hero-content {
   max-width: 700px;
@@ -128,4 +131,11 @@ body {
   background-color: #f5f5f5;
   font-size: 0.8rem;
   color: #777;
+}
+.hero-content .intro {
+  margin-top: 1.2rem;
+  line-height: 1.9;
+  opacity: .82;
+  font-weight: 300;
+  font-size: 1rem;
 }

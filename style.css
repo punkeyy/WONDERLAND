@@ -19,16 +19,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 5%;
-  position: fixed!important;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #eee;
-  z-index: 9999;  /* 이거만 남기기 */
+  z-index: 9999;
 }
-
 
 .logo {
   width: 140px;
@@ -56,6 +55,7 @@ body {
   text-align: center;
   background-color: #f5f5f5;
   margin-top: 180px !important;
+}
 
 .hero-content {
   max-width: 700px;
@@ -93,47 +93,6 @@ body {
   color: #fff;
 }
 
-/* Colors section */
-.colors {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 4rem 0;
-}
-
-.color-card {
-  width: 200px;   /* ← 컬러칩 카드 전체 크기 */
-  text-align: center;
-}
-
-.color-image {
-  width: 180px;   /* ← 이미지 크기(색상칩) */
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-}
-
-.color-card h3 {
-  margin-top: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.color-card p {
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 3rem 0;
-  background-color: #f5f5f5;
-  font-size: 0.8rem;
-  color: #777;
-}
 .hero-content .intro {
   margin-top: 1.2rem;
   line-height: 1.9;
@@ -141,6 +100,8 @@ body {
   font-weight: 300;
   font-size: 1rem;
 }
+
+/* 메인페이지 3컬러 */
 .colors {
   display: flex;
   justify-content: center;
@@ -155,10 +116,35 @@ body {
   object-fit: cover;
 }
 
-.colors {
-  padding-top: 1rem; /* ← 이 숫자 줄이면 위로 붙는다 */
+/* colors.html 그리드 */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 0; /* 상단 header 피하려고 margin↑ */
+  justify-items: center;
 }
 
-.colors img {
-  margin-top: 0;     /* ← 혹시 기본 margin 있으면 제거 */
+.color-grid .chip {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform .22s ease;
+  cursor: pointer;
+}
+
+.color-grid .chip:hover {
+  transform: scale(1.08);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: #f5f5f5;
+  font-size: 0.8rem;
+  color: #777;
 }

@@ -4,22 +4,153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WONDERLAND | Winning Color</title>
-<link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=6" />
+  <style>
+    /* Header 수정 */
+    .header {
+      display: flex;
+      justify-content: space-between; /* 로고와 메뉴 양 끝 정렬 */
+      align-items: center;            /* 세로 중앙 정렬 */
+      padding: 1.5rem 5%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 9999;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;        /* 메뉴 가로 배치 */
+      gap: 2rem;            /* 메뉴 간격 */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d2a679;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #f5f5f5;
+      margin-top: 80px; /* fixed header 높이만큼 */
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: #d2a679;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background-color: #111;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d2a679;
+      color: #fff;
+    }
+
+    /* 컬러 섹션 */
+    .colors {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 4rem 0;
+      flex-wrap: wrap;
+    }
+
+    .color-card {
+      width: 200px;
+      text-align: center;
+    }
+
+    .color-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .color-card h3 {
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+    }
+
+    .color-card p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 3rem 0;
+      background-color: #f5f5f5;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+      .colors { gap: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
-  <!-- 헤더 -->
-  <header class="header">
+
+<header class="header">
+  <a href="index.html">
     <img src="assets/logo.svg" alt="WONDERLAND 로고" class="logo" />
-    <nav class="nav">
-<a href="javascript:void(0)">About</a>
-<a href="colors.html">Colors</a>
-<a href="javascript:void(0)">Contact</a>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="colors.html">Colors</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
-
-    </nav>
-  </header>
-
-  <!-- 메인 히어로 섹션 -->
 <section class="hero">
   <div class="hero-content">
     <h1>Discover Your <span>Winning Color</span></h1>
@@ -36,31 +167,28 @@
     <a href="colors.html" class="btn">Explore Colors</a>
   </div>
 </section>
-    </div>
-  </section>
 
-  <!-- 컬러 소개 섹션 -->
-  <section class="colors">
-    <div class="color-card">
-      <img src="assets/color-1.jpg" alt="컬러 1" />
-      <h3>Serene Blue</h3>
-      <p>잔잔하지만 강한 인상을 주는 블루.</p>
-    </div>
-    <div class="color-card">
-      <img src="assets/color-2.jpg" alt="컬러 2" />
-      <h3>Golden Glow</h3>
-      <p>자신감과 따뜻함이 느껴지는 골드 톤.</p>
-    </div>
-    <div class="color-card">
-      <img src="assets/color-3.jpg" alt="컬러 3" />
-      <h3>Pure White</h3>
-      <p>모든 색의 시작, 완전한 여백의 미.</p>
-    </div>
-  </section>
+<section class="colors">
+  <div class="color-card">
+    <img src="assets/color-1.jpg" alt="컬러 1" />
+    <h3>Serene Blue</h3>
+    <p>잔잔하지만 강한 인상을 주는 블루.</p>
+  </div>
+  <div class="color-card">
+    <img src="assets/color-2.jpg" alt="컬러 2" />
+    <h3>Golden Glow</h3>
+    <p>자신감과 따뜻함이 느껴지는 골드 톤.</p>
+  </div>
+  <div class="color-card">
+    <img src="assets/color-3.jpg" alt="컬러 3" />
+    <h3>Pure White</h3>
+    <p>모든 색의 시작, 완전한 여백의 미.</p>
+  </div>
+</section>
 
-  <!-- 푸터 -->
-  <footer class="footer">
-    <p>© 2025 WONDERLAND | Designed with Minimal Passion</p>
-  </footer>
+<footer class="footer">
+  © 2025 WONDERLAND | Designed with Minimal Passion
+</footer>
+
 </body>
 </html>

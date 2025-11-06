@@ -3,8 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WONDERLAND | All Colors</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>WONDERLAND | Colors</title>
+  <link rel="stylesheet" href="style.css?v=7" />
+  <style>
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 9999;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d2a679;
+    }
+
+    /* Color grid */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 20px 60px; /* header 높이만큼 padding-top 확보 */
+      justify-items: center;
+    }
+
+    .chip {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .chip:hover {
+      transform: scale(1.08);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 3rem 0;
+      background-color: #f5f5f5;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .color-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .chip {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -12,52 +99,129 @@
   <a href="index.html">
     <img src="assets/logo.svg" alt="WONDERLAND 로고" class="logo" />
   </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="colors.html">Colors</a>
+    <a href="about.html">About</a>
+  </nav>
 </header>
 
-<section id="explore-colors" class="color-grid">
-  <!-- Reds -->
+<section class="color-grid">
+  <!-- 100개의 컬러칩 (hex 색상 다양하게) -->
   <div class="chip" style="background:#E63946"></div>
-  <div class="chip" style="background:#FF5A5F"></div>
+  <div class="chip" style="background:#F94144"></div>
+  <div class="chip" style="background:#FF6B6B"></div>
+  <div class="chip" style="background:#FF7B72"></div>
+  <div class="chip" style="background:#FF8C8C"></div>
+  <div class="chip" style="background:#FFB3B3"></div>
+  <div class="chip" style="background:#F07167"></div>
+  <div class="chip" style="background:#D7263D"></div>
+  <div class="chip" style="background:#FF4D6D"></div>
+  <div class="chip" style="background:#FF5964"></div>
+
+  <div class="chip" style="background:#F8961E"></div>
+  <div class="chip" style="background:#F9844A"></div>
+  <div class="chip" style="background:#F9C74F"></div>
+  <div class="chip" style="background:#90BE6D"></div>
+  <div class="chip" style="background:#43AA8B"></div>
+  <div class="chip" style="background:#577590"></div>
+  <div class="chip" style="background:#277DA1"></div>
+  <div class="chip" style="background:#4D908E"></div>
+  <div class="chip" style="background:#F3722C"></div>
+  <div class="chip" style="background:#F8961E"></div>
+
+  <div class="chip" style="background:#F9844A"></div>
+  <div class="chip" style="background:#F9C74F"></div>
+  <div class="chip" style="background:#90BE6D"></div>
+  <div class="chip" style="background:#43AA8B"></div>
+  <div class="chip" style="background:#577590"></div>
+  <div class="chip" style="background:#277DA1"></div>
+  <div class="chip" style="background:#4D908E"></div>
+  <div class="chip" style="background:#F94144"></div>
+  <div class="chip" style="background:#FF6B6B"></div>
+  <div class="chip" style="background:#FF7B72"></div>
+
+  <div class="chip" style="background:#FF8C8C"></div>
+  <div class="chip" style="background:#FFB3B3"></div>
+  <div class="chip" style="background:#F07167"></div>
+  <div class="chip" style="background:#D7263D"></div>
+  <div class="chip" style="background:#FF4D6D"></div>
+  <div class="chip" style="background:#FF5964"></div>
+  <div class="chip" style="background:#F3722C"></div>
+  <div class="chip" style="background:#F8961E"></div>
+  <div class="chip" style="background:#F9844A"></div>
+  <div class="chip" style="background:#F9C74F"></div>
+
+  <div class="chip" style="background:#90BE6D"></div>
+  <div class="chip" style="background:#43AA8B"></div>
+  <div class="chip" style="background:#577590"></div>
+  <div class="chip" style="background:#277DA1"></div>
+  <div class="chip" style="background:#4D908E"></div>
+  <div class="chip" style="background:#F94144"></div>
+  <div class="chip" style="background:#FF6B6B"></div>
   <div class="chip" style="background:#FF7B72"></div>
   <div class="chip" style="background:#FF8C8C"></div>
   <div class="chip" style="background:#FFB3B3"></div>
 
-  <!-- Oranges -->
-  <div class="chip" style="background:#FF7A00"></div>
-  <div class="chip" style="background:#FF9F00"></div>
-  <div class="chip" style="background:#FFB563"></div>
-  <div class="chip" style="background:#FFAD85"></div>
-  <div class="chip" style="background:#FFC69E"></div>
+  <div class="chip" style="background:#F07167"></div>
+  <div class="chip" style="background:#D7263D"></div>
+  <div class="chip" style="background:#FF4D6D"></div>
+  <div class="chip" style="background:#FF5964"></div>
+  <div class="chip" style="background:#F3722C"></div>
+  <div class="chip" style="background:#F8961E"></div>
+  <div class="chip" style="background:#F9844A"></div>
+  <div class="chip" style="background:#F9C74F"></div>
+  <div class="chip" style="background:#90BE6D"></div>
+  <div class="chip" style="background:#43AA8B"></div>
 
-  <!-- Yellows -->
-  <div class="chip" style="background:#FFD400"></div>
-  <div class="chip" style="background:#F4E409"></div>
-  <div class="chip" style="background:#F7EFAE"></div>
-  <div class="chip" style="background:#F9F2C7"></div>
-  <div class="chip" style="background:#FFF4AE"></div>
+  <div class="chip" style="background:#577590"></div>
+  <div class="chip" style="background:#277DA1"></div>
+  <div class="chip" style="background:#4D908E"></div>
+  <div class="chip" style="background:#F94144"></div>
+  <div class="chip" style="background:#FF6B6B"></div>
+  <div class="chip" style="background:#FF7B72"></div>
+  <div class="chip" style="background:#FF8C8C"></div>
+  <div class="chip" style="background:#FFB3B3"></div>
+  <div class="chip" style="background:#F07167"></div>
+  <div class="chip" style="background:#D7263D"></div>
 
-  <!-- Greens -->
-  <div class="chip" style="background:#52B788"></div>
-  <div class="chip" style="background:#6ECB63"></div>
-  <div class="chip" style="background:#90D5A5"></div>
-  <div class="chip" style="background:#A9E4C6"></div>
-  <div class="chip" style="background:#CDEFE0"></div>
+  <div class="chip" style="background:#FF4D6D"></div>
+  <div class="chip" style="background:#FF5964"></div>
+  <div class="chip" style="background:#F3722C"></div>
+  <div class="chip" style="background:#F8961E"></div>
+  <div class="chip" style="background:#F9844A"></div>
+  <div class="chip" style="background:#F9C74F"></div>
+  <div class="chip" style="background:#90BE6D"></div>
+  <div class="chip" style="background:#43AA8B"></div>
+  <div class="chip" style="background:#577590"></div>
+  <div class="chip" style="background:#277DA1"></div>
 
-  <!-- Blues -->
-  <div class="chip" style="background:#1C6DD0"></div>
-  <div class="chip" style="background:#3A86FF"></div>
-  <div class="chip" style="background:#70A9FF"></div>
-  <div class="chip" style="background:#96C7FF"></div>
-  <div class="chip" style="background:#CBE5FF"></div>
+  <div class="chip" style="background:#4D908E"></div>
+  <div class="chip" style="background:#F94144"></div>
+  <div class="chip" style="background:#FF6B6B"></div>
+  <div class="chip" style="background:#FF7B72"></div>
+  <div class="chip" style="background:#FF8C8C"></div>
+  <div class="chip" style="background:#FFB3B3"></div>
+  <div class="chip" style="background:#F07167"></div>
+  <div class="chip" style="background:#D7263D"></div>
+  <div class="chip" style="background:#FF4D6D"></div>
+  <div class="chip" style="background:#FF5964"></div>
 
-  <!-- Purples -->
-  <div class="chip" style="background:#A66AFF"></div>
-  <div class="chip" style="background:#C77DFF"></div>
-  <div class="chip" style="background:#E0AAFF"></div>
-  <div class="chip" style="background:#F1D4FF"></div>
-  <div class="chip" style="background:#E5C1F9"></div>
+  <div class="chip" style="background:#F3722C"></div>
+  <div class="chip" style="background:#F8961E"></div>
+  <div class="chip" style="background:#F9844A"></div>
+  <div class="chip" style="background:#F9C74F"></div>
+  <div class="chip" style="background:#90BE6D"></div>
+  <div class="chip" style="background:#43AA8B"></div>
+  <div class="chip" style="background:#577590"></div>
+  <div class="chip" style="background:#277DA1"></div>
+  <div class="chip" style="background:#4D908E"></div>
+  <div class="chip" style="background:#F94144"></div>
 </section>
 
+<footer class="footer">
+  © 2025 WONDERLAND | Designed with Minimal Passion
+</footer>
 
 </body>
 </html>

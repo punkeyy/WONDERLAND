@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WONDERLAND | About</title>
+  <link rel="stylesheet" href="style.css?v=6" />
+  <style>
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eee;
+      z-index: 9999;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d2a679;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #FFD400 0%, #FF6B6B 100%);
+      color: #fff;
+      margin-top: 80px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 60px 0 40px;
+      font-weight: 600;
+    }
+
+    /* Cards */
+    .philosophy, .process, .team {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      flex: 1 1 280px;
+      max-width: 320px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      background-color: #111;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+    }
+
+    .btn:hover {
+      background-color: #d2a679;
+      color: #fff;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 3rem 0;
+      background-color: #f5f5f5;
+      font-size: 0.8rem;
+      color: #777;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .philosophy, .process, .team { gap: 1rem; }
+      .card { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html">
+    <img src="assets/logo.svg" alt="WONDERLAND 로고" class="logo" />
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="colors.html">Colors</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>당신만의 색, 당신만의 이야기</h1>
+    <p>WONDERLAND는 색을 통해 사람과 브랜드가 가진 가능성을 밝혀냅니다.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">브랜드 철학</h2>
+  <div class="philosophy">
+    <div class="card">
+      <h3>위닝컬러의 의미</h3>
+      <p>각 브랜드에는 대표 컬러가 있으며, 이를 통해 브랜드와 사람의 고유한 개성을 발견합니다.</p>
+    </div>
+    <div class="card">
+      <h3>나만의 색 발견</h3>
+      <p>당신에게 어울리는 컬러를 찾아 드리고, 자신만의 스타일과 감성을 완성합니다.</p>
+    </div>
+    <div class="card">
+      <h3>가능성을 밝히다</h3>
+      <p>작은 색의 차이에서도 사람과 브랜드의 무한한 가능성을 발견하고, 그 가치를 실현합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">컬러 경험 프로세스</h2>
+  <div class="process">
+    <div class="card">
+      <h3>1. 컬러 선택</h3>
+      <p>원하는 색감을 탐색하며 나에게 맞는 컬러를 선택합니다.</p>
+    </div>
+    <div class="card">
+      <h3>2. 나만의 위닝컬러 확인</h3>
+      <p>선택한 색상으로 자신만의 컬러 스토리를 만들어 봅니다.</p>
+    </div>
+    <div class="card">
+      <h3>3. 활용과 스타일링</h3>
+      <p>추천 컬러로 브랜딩, 디자인, 라이프스타일에 적용합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">우리의 미션</h2>
+  <div class="team">
+    <div class="card">
+      <h3>WONDERLAND 팀</h3>
+      <p>색과 디자인으로 세상에 활기를 불어넣는 전문가들이 모였습니다.</p>
+    </div>
+    <div class="card">
+      <h3>미션</h3>
+      <p>모든 사람과 브랜드가 자신만의 색을 찾고, 감각적 경험을 즐기게 하는 것.</p>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center; padding-bottom:100px;">
+  <a href="colors.html" class="btn">Explore Colors</a>
+</section>
+
+<footer class="footer">
+  © 2025 WONDERLAND | Designed with Minimal Passion
+</footer>
+
+</body>
+</html>

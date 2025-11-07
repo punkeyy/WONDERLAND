@@ -148,3 +148,12 @@ body {
   font-size: 0.8rem;
   color: #777;
 }
+/* 본문 텍스트 사이즈 조정 */
+.card p {
+  font-size: 0.85rem;   /* 본문 글자 크기 작게 */
+  color: #555;
+  line-height: 1.6;
+}
+.card p {
+  font-size: 0.75rem;
+}
